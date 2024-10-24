@@ -13,7 +13,8 @@
     "tsc": "tsc",
     "lint": "eslint 'src/**/*.ts{,x}' --cache",
     "lint:fix": "eslint 'src/**/*.ts{,x}' --cache --fix",
-    "test": "jest"
+    "test": "jest",
+    "prepare": "husky"
   },
   "author": "Looker",
   "license": "MIT",
@@ -90,6 +91,7 @@
     "eslint-plugin-react": "7.29.4",
     "eslint-plugin-react-hooks": "4.4.0",
     "eslint-plugin-testing-library": "5.3.1",
+    "husky": "^9.1.6",
     "jest": "^26.6.3",
     "jest-junit": "^12.1.0",
     "jest-styled-components": "^7.0.3",
