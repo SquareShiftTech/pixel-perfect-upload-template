@@ -1,18 +1,23 @@
-import React, { useState, useRef, useEffect } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import '../customstyles/dropdown.css' // For styling
-import { IDashboardBase, IFolder } from '@looker/sdk'
+import type { IDashboardBase, IFolder } from '@looker/sdk'
 
-const Dropdown = ({ options, onSelect }) => {
+type DropdownProps = {
+  options: IFolder[]
+}
+
+const Dropdown: React.FC<DropdownProps> = ({ options }) => {
   const [isOpen, setIsOpen] = useState(false)
-  const [selectedOption, setSelectedOption] = useState<string|null|undefined>(null)
+  const [selectedOption, setSelectedOption] = useState<
+    string | null | undefined
+  >(null)
   const dropdownRef = useRef(null)
 
   const toggleDropdown = () => setIsOpen((prev) => !prev)
 
   const handleOptionClick = (option: IDashboardBase) => {
     setSelectedOption(option?.title)
-    setIsOpen(false)
-    onSelect(option) // Notify parent component of the selection
+    setIsOpen(false) // Notify parent component of the selection
   }
 
   // Close dropdown if clicked outside
@@ -35,10 +40,11 @@ const Dropdown = ({ options, onSelect }) => {
       </div>
       {isOpen && (
         <div className="dropdown-menu">
-          {options.map((option: IFolder, index: number) => (
-              <div className="dropdown-group" key={index}>
-                <span>{option?.name}</span>
-                {option?.dashboards?.map((dashboard: IDashboardBase, inde: number) => (
+          {options?.map((option: IFolder, index: number) => (
+            <div className="dropdown-group" key={index}>
+              <span>{option?.name}</span>
+              {option?.dashboards?.map(
+                (dashboard: IDashboardBase, inde: number) => (
                   <div
                     key={inde}
                     className="dropdown-item"
@@ -46,8 +52,9 @@ const Dropdown = ({ options, onSelect }) => {
                   >
                     {dashboard.title}
                   </div>
-                ))}
-              </div>
+                )
+              )}
+            </div>
           ))}
         </div>
       )}

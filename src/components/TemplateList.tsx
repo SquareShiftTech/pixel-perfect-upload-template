@@ -33,7 +33,6 @@ import {
 import { Edit, Delete, Download } from '@styled-icons/material'
 import React, { useContext, useEffect, useState } from 'react'
 import { getTemplates } from '../api'
-import { ExtensionContext40 } from '@looker/extension-sdk-react'
 import '../customstyles/table.css' // Import the CSS file
 
 const TemplateList = () => {
@@ -82,12 +81,12 @@ const TemplateList = () => {
             <tbody>
               {existingTemplates?.length ? (
                 existingTemplates.map((item, index) => (
-                  <tr className="table-row">
+                  <tr key={index} className="table-row">
                     <td
                       className="table-cell"
                       style={{
                         borderBottom:
-                          index == existingTemplates?.length - 1 ? '0' : '',
+                          index === existingTemplates?.length - 1 ? '0' : '',
                       }}
                     >
                       {index + 1}
@@ -96,7 +95,7 @@ const TemplateList = () => {
                       className="table-cell"
                       style={{
                         borderBottom:
-                          index == existingTemplates?.length - 1 ? '0' : '',
+                          index === existingTemplates?.length - 1 ? '0' : '',
                       }}
                     >
                       {item}
@@ -105,7 +104,7 @@ const TemplateList = () => {
                       className="table-cell"
                       style={{
                         borderBottom:
-                          index == existingTemplates?.length - 1 ? '0' : '',
+                          index === existingTemplates?.length - 1 ? '0' : '',
                       }}
                     >
                       {'Name'}
@@ -114,7 +113,7 @@ const TemplateList = () => {
                       className="table-cell"
                       style={{
                         borderBottom:
-                          index == existingTemplates?.length - 1 ? '0' : '',
+                          index === existingTemplates?.length - 1 ? '0' : '',
                       }}
                     >
                       {'Avail'}
@@ -123,7 +122,7 @@ const TemplateList = () => {
                       className="table-cell"
                       style={{
                         borderBottom:
-                          index == existingTemplates?.length - 1 ? '0' : '',
+                          index === existingTemplates?.length - 1 ? '0' : '',
                       }}
                     >
                       <IconButton

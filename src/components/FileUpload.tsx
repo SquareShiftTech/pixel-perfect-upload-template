@@ -34,12 +34,12 @@ import {
   ProgressCircular,
   Space,
 } from '@looker/components'
+import { ExtensionContext40 } from '@looker/extension-sdk-react'
+import type { IFolder } from '@looker/sdk'
 import { getTemplates, uploadFile } from '../api'
 import TemplateList from './TemplateList'
 import '../customstyles/upload.css'
 import Dropdown from './dropdown'
-import { ExtensionContext40 } from '@looker/extension-sdk-react'
-import { IFolder } from '@looker/sdk'
 
 const Loading = () => {
   return (
@@ -97,7 +97,6 @@ export const FileUpload: React.FC = () => {
   const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const files = event.target.files
     if (files) {
-      console.log('Selected file:', files[0])
       setFileName(files[0].name) // Log the selected file
     }
   }
@@ -108,17 +107,12 @@ export const FileUpload: React.FC = () => {
     }
   }
 
-  const handleSelect = (option: IFolder) => {
-    console.log('Selected option:', option)
-  }
-
   const getFolders = async () => {
-    let singleFolder = await coreSDK.ok(
+    const singleFolder = await coreSDK.ok(
       coreSDK.folder_children({ folder_id: '57' })
     )
     setIsLoading(false)
     setFolderList(singleFolder)
-    console.log('singleFolder', singleFolder)
   }
 
   useEffect(() => {
@@ -154,10 +148,7 @@ export const FileUpload: React.FC = () => {
               <div className="container_div">
                 <label className="input_label">Select Dashboard:</label>
                 <br />
-                <Dropdown
-                  options={folderList}
-                  onSelect={handleSelect}
-                />
+                <Dropdown options={folderList} />
               </div>
             </div>
             <div className="but_div">
