@@ -1,4 +1,4 @@
-project_name: "pixel_perfect_frontend_testing"
+project_name: "pixel_perfect_manage_template"
 # # Use local_dependency: To enable referencing of another project
 # # on this instance with include: statements
 #
@@ -6,8 +6,8 @@ project_name: "pixel_perfect_frontend_testing"
 #   project: "name_of_other_project"
 # }
 
-application: pixel_perfect_frontend_testing {
-  label: "Operative Pixel Perfect"
+application: pixel_perfect_manage_template {
+  label: "Pixel Perfect Template Management"
   url: "https://localhost:8080/bundle.js"
   # file: "bundle.js
   entitlements: {

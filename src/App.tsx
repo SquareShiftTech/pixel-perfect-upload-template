@@ -24,16 +24,11 @@
 
  */
 import React from 'react'
-
 import { ExtensionProvider40 } from '@looker/extension-sdk-react'
-
-import { FileUpload } from './FileUpload'
-import Header from './Header'
+import { FileUpload } from './components/FileUpload'
 
 export const App = () => (
   <ExtensionProvider40>
-    {/* <HelloWorld /> */}
-    <Header />
     <FileUpload />
   </ExtensionProvider40>
 )

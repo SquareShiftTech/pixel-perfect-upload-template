@@ -55,6 +55,11 @@ module.exports = {
         include: /src/,
         sideEffects: false,
       },
+      // Add this rule to handle CSS files
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader'], // These loaders allow importing CSS files into JavaScript
+      },
     ],
   },
   resolve: {
