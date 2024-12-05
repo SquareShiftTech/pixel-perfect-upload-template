@@ -141,8 +141,8 @@ const TemplateList = () => {
         draggable: true,
         progress: undefined,
         style: {
-          background: '#4caf50',
-          color: 'white',
+          background: 'white',
+          color: '#4caf50',
           borderRadius: '8px',
           boxShadow: '0 4px 6px rgba(0,0,0,0.1)',
           fontSize: '14px'
@@ -209,8 +209,8 @@ const TemplateList = () => {
         draggable: true,
         progress: undefined,
         style: {
-          background: '#4caf50',
-          color: 'white',
+          background: 'white',
+          color: '#4caf50',
           borderRadius: '8px',
           boxShadow: '0 4px 6px rgba(0,0,0,0.1)',
           fontSize: '14px'
