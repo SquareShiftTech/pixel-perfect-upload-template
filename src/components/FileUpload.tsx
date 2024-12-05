@@ -131,7 +131,7 @@ export const FileUpload: React.FC = () => {
       ) : (
         <div>
           <TemplateList />
-          <div className="container">
+          {/* <div className="container">
             <h4>Add Template</h4>
             <div className="container_inputs">
               <div className="container_div">
@@ -176,7 +176,7 @@ export const FileUpload: React.FC = () => {
                 </button>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       )}
     </ComponentsProvider>

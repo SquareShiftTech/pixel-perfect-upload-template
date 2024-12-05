@@ -18,8 +18,8 @@
   }
   
   .upload-button {
-    padding: 10px 20px;
-    font-size: 13px;
+    padding: 9px 29px;
+    font-size: 11px;
     font-weight: bold;
     color: #444bc4;
     background-color: #fff;
@@ -27,7 +27,8 @@
     border-radius: 5px;
     cursor: pointer;
     text-transform: uppercase;
-    margin-top: 15px;
+    margin-top: 2px;
+    margin-bottom: 11px;
   }
   
   .upload-button:hover {

@@ -22,6 +22,8 @@
     "node": ">=14"
   },
   "dependencies": {
+    "@emotion/react": "^11.13.5",
+    "@emotion/styled": "^11.13.5",
     "@looker/components": "^5.0.3",
     "@looker/components-providers": "1.5.34",
     "@looker/design-tokens": "3.1.1",
@@ -33,6 +35,8 @@
     "@looker/sdk": "^23.20.1",
     "@looker/sdk-node": "^24.20.0",
     "@looker/sdk-rtl": "21.6.1",
+    "@mui/material": "^6.1.9",
+    "@mui/styled-engine-sc": "^6.1.9",
     "@styled-icons/material": "^10.47.0",
     "@styled-icons/material-outlined": "^10.47.0",
     "@styled-icons/material-rounded": "^10.47.0",
@@ -42,6 +46,7 @@
     "react-dom": "^16.14.0",
     "react-is": "^16.13.1",
     "react-router-dom": "^5.3.0",
+    "react-toastify": "^8.2.0",
     "semver": "^7.5.4",
     "styled-components": "^5.3.11"
   },

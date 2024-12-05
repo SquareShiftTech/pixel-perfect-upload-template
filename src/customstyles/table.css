@@ -60,8 +60,114 @@
   padding: 10px;
   font-size: 13px;
   border-radius: 8px;
+  
 }
 
 .upload_button:hover {
   background-color: #444bc4;
+}
+
+.giSeDt {
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 3px 0px, rgba(60, 64, 67, 0.15) 0px 4px 8px 3px;
+  max-height: 100%;
+  position: relative;
+  top: 0px;
+  width: 800px !important;
+  padding: 21px 18px  !important;
+  align-self: flex-start;
+}
+
+/*.dashboard-container {
+  margin-top: 6px;
+    margin-bottom: 16px;
+    border: none;
+    padding: 7px 7px;
+    display: flex;
+    border-radius: 4px;
+    gap: 16px;
+    background: #f3f3f3;
+    box-shadow: 0px 0px 2px #aaa;
+}
+
+.right-content{
+  width: 33%;
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+    font-size: 13px;
+    border: 1px solid;
+    padding: 4px 6px;
+    background: #acace0;
+    color: white;
+    border-radius: 9px;
+}
+
+.left-content {
+  width: 70%;
+  padding: 4px 6px;
+  display: flex;
+  gap: 16px;
+}
+
+.left-content-item {
+    border: 1px solid;
+    font-size: 12px;
+    padding: 6px 11px;
+    height: 48%;
+    display: flex;
+    align-items: center;
+    background: #acace0;
+    border: none;
+    border-radius: 11px;
+} */
+
+.dashboard-container {
+  display: flex;
+  gap: 15px;
+  margin: 10px 0;
+}
+
+.right-content, .middle-content, .right-content {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #eee;
+  border-radius: 4px;
+  /* min-height: 200px; */
+}
+
+.folder-item, .subfolder-item, .dashboard-item {
+  padding: 8px 12px;
+  margin: 4px 0;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 10px;
+}
+
+.folder-item:hover, .subfolder-item:hover, .dashboard-item:hover {
+  background-color: #f5f5f5;
+}
+
+.selected {
+  background-color: #e3f2fd;
+  border: 1px solid #90caf9;
+}
+
+.dashboard-item.selected {
+  background-color: #e8f5e9;
+  border: 1px solid #a5d6a7;
+}
+
+button.upload_button.move{
+  color: #fff;
+    background: #444bc4;
+    border: 1px solid #444bc4;
+    padding: 9px 29px;
+    font-size: 11px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    margin-top: 2px;
+    margin-bottom: 11px;
 }
