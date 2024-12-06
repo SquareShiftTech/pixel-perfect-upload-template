@@ -277,7 +277,7 @@ const TemplateList = () => {
                   {selectedRole === "admin" ?
                   <button
                     className="upload-button"
-                    onClick={() => alert('Upload functionality goes here!')}
+                    onClick={() => setIsModalOpen(true)}
                   >
                     Add Template
                   </button> : null }
@@ -387,7 +387,7 @@ const TemplateList = () => {
                   <div className="message">You did not have templates</div>
                   <button
                     className="upload-button"
-                    onClick={() => alert('Upload functionality goes here!')}
+                    onClick={() => setIsModalOpen(true)}
                   >
                     Add Template
                   </button>
