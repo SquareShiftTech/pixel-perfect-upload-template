@@ -1,8 +1,11 @@
 /* Container */
 .table-container {
   margin: 20px;
-  border: 1px solid #ddd;
+  /* border: 1px solid #ddd; */
   border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* Table Styles */

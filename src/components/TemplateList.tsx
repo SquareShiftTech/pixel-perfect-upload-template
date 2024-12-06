@@ -271,17 +271,18 @@ const TemplateList = () => {
           <></>
         )}
         <div className="table-container">
-          {/* {existingTemplates?.length && (
+          {existingTemplates?.length && (
                 <div className="container">
-                  <div className="message">You did not have templates</div>
+                  <div className="message">{selectedRole === "admin" ? "You did not have templates" : "You do not have templates. Please contact your admin to add templates." }</div>
+                  {selectedRole === "admin" ?
                   <button
                     className="upload-button"
                     onClick={() => alert('Upload functionality goes here!')}
                   >
                     Add Template
-                  </button>
+                  </button> : null }
                 </div>
-              )} */}
+              )}
           <table className="data-table">
             <thead>
               <tr>
