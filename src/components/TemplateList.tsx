@@ -374,7 +374,7 @@ const TemplateList = () => {
                         }
                       />
                       {selectedRole === "admin" ?
-                        <button className='upload_button' style={{ padding: "6px", cursor: "pointer", marginLeft: "49px"}} onClick={() => handleMoveToTenant(index)}
+                        <button className='upload_button' style={{ padding: "7px", cursor: "pointer", marginLeft: "49px"}} onClick={() => handleMoveToTenant(index)}
                           disabled={movedTemplates.has(index)}>
                           {movedTemplates.has(index) ? 'Moved' : 'Move to tenant'}
                         </button>
